@@ -33,7 +33,7 @@ class ResetController extends Controller
             ], 400);
         }
 
-        DB::table('users')->where('email', $email)->update(['password', $password]);
+        DB::table('users')->where('email', $email)->update(['password' => $password]);
         DB::table('password_resets')->where('email', $email)->delete();
 
         return response([
