@@ -29,11 +29,10 @@ class AuthController extends Controller
             return response([
                 'message' => $exception->getMessage()
             ], 400);
-
-            return response([
-                'messsage' => 'Invalid Email Or Password'
-            ], 401);
         }
+        return response([
+            'messsage' => 'Invalid Email Or Password'
+        ], 401);
     } //end method
 
 
